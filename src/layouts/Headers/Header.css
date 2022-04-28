@@ -1,0 +1,15 @@
+/* Main Menu Style */
+.main-menu li a.active {
+  color: var(--primary-color);
+}
+
+/* Categori toggle */
+.category-items {
+  display: block !important;
+  transform: scaleY(0);
+  transform-origin: top center;
+  transition: var(--transition);
+}
+.category-items.active {
+  transform: scaleY(1);
+}

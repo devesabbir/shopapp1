@@ -1,0 +1,121 @@
+:root {
+  --transition: 0.4s;
+  --primary-color: #9c24c7;
+  --orange: #c0392b;
+  --orange-hover: #9c59b636;
+  --sweet-dark: #2c3e50;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+/* Default input select style is here */
+select,
+select:focus {
+  border: none !important;
+  cursor: pointer;
+}
+/* fieldset legend */
+fieldset {
+  display: block;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em;
+  min-inline-size: min-content;
+  border-width: 2px !important;
+  border-style: groove !important;
+  border-color: threedface !important;
+  border-image: initial !important;
+}
+legend {
+  display: block !important;
+  padding-inline-start: 2px !important;
+  padding-inline-end: 2px !important;
+  border-width: initial !important;
+  border-style: none !important;
+  border-color: initial !important;
+  border-image: initial !important;
+}
+
+/* Css TolTip Css start here */
+.cssTolTips {
+  background: #ddd;
+  display: inline-block;
+  border-radius: 50px;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  text-align: center;
+  cursor: help;
+  position: relative;
+}
+.cssTolTips:hover {
+  background: rgb(161, 161, 161);
+  color: white;
+}
+.cssTolTips::before {
+  content: attr(toltipdata);
+  width: 250px;
+  padding: 5px;
+  display: inline-block;
+  position: absolute;
+  top: -170%;
+  left: calc(50% - 125px);
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.4s;
+  transition-delay: 0.2s;
+  color: black;
+}
+.cssTolTips:hover:before {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Blinking Animation */
+.blinking {
+  color: green;
+  animation: my_blinking 0.4s infinite linear;
+}
+
+@keyframes my_blinking {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
